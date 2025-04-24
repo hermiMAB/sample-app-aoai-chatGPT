@@ -4,14 +4,15 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "npm run dev", // Alias for dev
     "dev": "vite",
     "build": "tsc && vite build",
-    "watch": "tsc && vite build --watch",
-    "test": "jest",
-    "lint": "npx eslint src",
-    "lint:fix": "npx eslint --fix",
-    "prettier": "npx prettier src --check",
-    "prettier:fix": "npx prettier src --write",
+    "watch": "tsc --watch",
+    "test": "jest --coverage",
+    "lint": "eslint src --ext .ts,.tsx",
+    "lint:fix": "eslint src --fix --ext .ts,.tsx",
+    "prettier": "prettier src --check",
+    "prettier:fix": "prettier src --write",
     "format": "npm run prettier:fix && npm run lint:fix"
   },
   "dependencies": {
